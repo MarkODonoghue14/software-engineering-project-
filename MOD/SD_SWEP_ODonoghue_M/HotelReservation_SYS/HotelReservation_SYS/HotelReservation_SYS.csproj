@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7677854E-5A0C-4DB3-8C12-E0922E158E11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HotelReservation_SYS</RootNamespace>
+    <AssemblyName>HotelReservation_SYS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRoom.Designer.cs">
+      <DependentUpon>AddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRoomRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRoomRate.Designer.cs">
+      <DependentUpon>AddRoomRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckIn.Designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakeReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeReservation.Designer.cs">
+      <DependentUpon>MakeReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenClose.Designer.cs">
+      <DependentUpon>OpenClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservations.cs" />
+    <Compile Include="RoomAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomAnalysis.Designer.cs">
+      <DependentUpon>RoomAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomRate.cs" />
+    <Compile Include="Rooms.cs" />
+    <Compile Include="SalesAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAnalysis.Designer.cs">
+      <DependentUpon>SalesAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRoom.Designer.cs">
+      <DependentUpon>UpdateRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRoomRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRoomRate.Designer.cs">
+      <DependentUpon>UpdateRoomRate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddRoom.resx">
+      <DependentUpon>AddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRoomRate.resx">
+      <DependentUpon>AddRoomRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelReservation.resx">
+      <DependentUpon>CancelReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeReservation.resx">
+      <DependentUpon>MakeReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenClose.resx">
+      <DependentUpon>OpenClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomAnalysis.resx">
+      <DependentUpon>RoomAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesAnalysis.resx">
+      <DependentUpon>SalesAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRoom.resx">
+      <DependentUpon>UpdateRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRoomRate.resx">
+      <DependentUpon>UpdateRoomRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addRoomRate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addRoomRate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateRoomRate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateRoomRate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateRoomRate2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateRoomRate3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateRoomRate4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateRoomRate5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateRoomRate6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateRoomrate7.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
